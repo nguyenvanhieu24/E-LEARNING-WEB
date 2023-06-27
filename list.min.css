@@ -1,0 +1,1569 @@
+:root {
+    --box-shadow-color: rgba(188,188,188,.5);
+    --title-block-color: #3b3c54;
+    --title-color: #3b3c54;
+    --title-color-hover: #2c31cf;
+    --featured-color: #fff;
+    --accent-color: #3d6cae;
+    --white-color: #fff;
+}
+
+#list {
+    min-height: 500px;
+}
+
+#search input {
+    padding-left: 30px;
+}
+
+#search .input-group .glyphicon-search {
+    left: 0 !important;
+    z-index: 5 !important;
+}
+
+.course-thumb {
+    position: relative;
+}
+
+.course-thumb .is-sale {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    width: 45px;
+    height: 45px;
+    color: #8b4612;
+    font-size: 10px;
+    background: url("../../../Images/home-v2/sale-banner.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.course-thumb .is-sale .is-sale-number {
+    display: block;
+    width: 100%;
+}
+
+.course-thumb .is-sale .is-sale-number>span {
+    display: block;
+}
+
+.course-thumb .is-sale .is-sale-only {
+    text-transform: uppercase;
+}
+
+.course-thumb a {
+    display: block;
+}
+
+.course-thumb a>img {
+    width: 100%;
+    transform: none !important;
+    display: block;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.list-courses {
+    margin-bottom: 20px;
+}
+
+.list-courses:last-child {
+    margin-bottom: 0;
+}
+
+.list-courses .row {
+    flex-wrap: wrap;
+    display: flex;
+    width: calc(100% + 30px);
+}
+
+.list-courses .item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-courses .btn-carousel {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 0 rgba(188,188,188,.8);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 35px);
+    background: var(--white);
+    color: #434b56;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: all 300ms;
+}
+
+.list-courses .btn-carousel:hover {
+    color: var(--white);
+    background: var(--accent-color);
+}
+
+.list-courses .btn-carousel.slick-next {
+    right: -35px;
+}
+
+.list-courses .btn-carousel.slick-prev {
+    left: -35px;
+}
+
+.list-courses .btn-carousel[aria-disabled*="true"] {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.list-courses .container-circle {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.list-courses .prec {
+    font-size: 12px;
+    color: #fff;
+}
+
+.list-courses .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #565151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-courses .active-border {
+    padding: 1px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-courses .timeCouter {
+    border-radius: 3px;
+    background: rgba(0,0,0,.3);
+    display: inline-block;
+    padding: 1px 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.list-courses .timeCouter .time {
+    color: #fff;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+}
+
+.list-courses #no-data {
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.list-courses #no-data img {
+    width: 350px;
+    max-width: 100%;
+}
+
+.list-courses #no-data h2 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.view-content {
+    padding: 15px;
+    min-height: 220px;
+    position: relative;
+}
+
+.view-content .course-author {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 13px;
+    color: #42526e;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.view-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -40px -15px 0;
+    position: relative;
+    background: #fff;
+    padding: 15px 15px 7px;
+    border-top-right-radius: 30px;
+}
+
+.view-content-header__img-top {
+    display: none !important;
+}
+
+.view-content-header .course-type {
+    padding: 4px 6px 3px;
+    font-size: 10px;
+    color: var(--white-color);
+    border-radius: 13px;
+}
+
+.view-content-header .course-type.online {
+    background: #ffab00;
+}
+
+.view-content-header .course-type.offline {
+    background: #869ffd;
+}
+
+.view-content-header .course-type.on-or-off {
+    background: #09d0da;
+}
+
+.view-content-footer {
+    width: calc(100% - 30px);
+    padding: 7px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #dcdff1;
+    position: absolute;
+    bottom: 0;
+    color: #42526e;
+    font-weight: 600;
+}
+
+.view-content-footer .course-footer-left .sale-price .current-unit,.view-content-footer .course-footer-left .old-price .current-unit {
+    font-size: 10px;
+}
+
+.view-content-footer .course-footer-left .sale-price {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 6px 12px;
+    color: #fff;
+    background: #4c5eff;
+    border-radius: 15px;
+}
+
+.view-content-footer .course-footer-left .old-price {
+    position: relative;
+    font-size: 13px;
+}
+
+.view-content-footer .course-footer-left .old-price::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #42526e;
+    bottom: 7px;
+    left: 0;
+}
+
+.view-content-footer .course-footer-left {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.view-content-footer .course-footer-right .is-competed {
+    color: #a5adba;
+    font-weight: normal;
+}
+
+.view-content-footer .course-footer-right .btn-continue-study {
+    text-decoration: none;
+    padding: 6px 13px;
+    font-size: 14px;
+    background: #36b37e;
+    color: var(--white-color);
+    border-radius: 15px;
+}
+
+.course-item .wrap-course-item.is-combo {
+    background: #4c5eff;
+}
+
+.course-item .wrap-course-item.is-combo .view-content .view-content-header {
+    background: #4c5eff;
+    border-radius: unset;
+}
+
+.course-item .wrap-course-item.is-combo .view-content .view-content-header__img-top {
+    display: block !important;
+    position: absolute;
+    top: -27px;
+    left: 0;
+    width: 100%;
+    height: 28px;
+}
+
+.course-item .wrap-course-item.is-combo .course-title a {
+    color: var(--white-color);
+}
+
+.course-item .wrap-course-item.is-combo .view-content .course-author {
+    color: var(--white-color);
+    opacity: .5;
+}
+
+.course-item .wrap-course-item.is-combo .view-content .course-description {
+    color: var(--white-color);
+}
+
+.course-item .wrap-course-item.is-combo .view-content-footer {
+    border-color: rgba(255,255,255,.15);
+}
+
+.course-item .wrap-course-item.is-combo .view-content-footer .course-footer-left .sale-price {
+    background: #fa6400;
+}
+
+.course-item .wrap-course-item.is-combo .view-content-footer .course-footer-left .old-price {
+    color: var(--white-color);
+}
+
+.course-item .wrap-course-item.is-combo .view-content-footer .course-footer-left .old-price::after {
+    background: var(--white-color);
+}
+
+.course-item .wrap-course-item.is-combo .course-type-footer {
+    color: var(--white-color);
+}
+
+.course-item .wrap-course-item.is-combo .course-type-footer.is-competed {
+    opacity: .7;
+}
+
+.wrap-course-item {
+    position: relative;
+}
+
+.wrap-course-item:hover .popover-course {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.free-text {
+    font-size: 16px;
+    color: #4c5eff;
+    font-weight: 600;
+}
+
+.is-combo .free-text {
+    font-size: 16px;
+    color: var(--white-color);
+}
+
+.popover-course {
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    width: 360px;
+    z-index: 2;
+    box-shadow: 0 5px 15px 0 rgba(133,142,176,.5);
+    height: 100%;
+    padding: 25px 30px;
+    transform: translateY(15px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-out;
+}
+
+.popover-course.arrow-left::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -13px;
+    width: 0;
+    height: 0;
+    border-right: 13px solid var(--white-color);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.popover-course.arrow-right::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: -13px;
+    width: 0;
+    height: 0;
+    border-left: 13px solid var(--white-color);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.popover-course__title {
+    font-size: 22px;
+    margin-top: 0;
+    color: #1e2a55;
+    line-height: 1.2;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.popover-course__title:hover {
+    text-decoration: none;
+}
+
+.popover-course__sum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dcdff1;
+}
+
+.popover-course__sum .author {
+    display: flex;
+    align-items: center;
+}
+
+.popover-course__sum .author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.popover-course__sum .author .user-name {
+    font-size: 13px;
+    color: #4c5eff;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 125px;
+}
+
+.popover-course__sum .rate-wrap {
+    font-size: 13px;
+}
+
+.popover-course__sum .rate-wrap .avg-rate {
+    color: #202842;
+}
+
+.popover-course__sum .rate-wrap .total-rate {
+    color: #a5adba;
+}
+
+.popover-course__detail-infor {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 10px;
+}
+
+.popover-course__detail-infor li {
+    color: #202842;
+}
+
+.popover-course__detail-infor li>p>i {
+    color: #4c5eff;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.popover-course__btn-buy-now {
+    position: absolute;
+    bottom: 25px;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+    display: inline-block;
+    background: #ec5252;
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: calc(100% - 50px);
+    border-radius: 5px;
+    padding: 12px 40px 12px;
+    transition: 300ms all;
+    border: 1px solid #ec5252;
+    cursor: pointer;
+}
+
+.popover-course__btn-buy-now:hover {
+    background: var(-\2dwhite-color);
+    color:#ec5252;text-decoration:none;}
+
+@media(max-width: 768px) {
+    .wrap-course-item:hover .popover-course {
+        display:none;
+    }
+}
+
+.view-content .course-description {
+    font-family: 'codelearn-font';
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #42526e;
+    line-height: 1.5;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 44px;
+    max-height: 3em;
+}
+
+.span-percent {
+    height: 21px;
+    width: 34px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+}
+
+.owner-profile :hover {
+    cursor: pointer;
+}
+
+.img-total-lesson {
+    width: 18px;
+}
+
+.span-total-lesson {
+    margin-left: 3px;
+    color: #626d7d;
+    line-height: 16px;
+    margin-right: 20px;
+}
+
+.span-img-total {
+    float: left;
+    margin-top: 4px;
+    margin-left: 40%;
+}
+
+.user-class-name {
+    color: #4d96ff;
+    margin-left: 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.task-creator-label {
+    padding: 0 5px;
+    position: relative;
+    display: flex;
+}
+
+.avatars {
+    position: absolute;
+    display: inline-block;
+    margin-top: -10px;
+    bottom: -10px;
+    right: 10px;
+}
+
+.title {
+    margin-top: 0;
+}
+
+.title a {
+    color: #000;
+    font-size: 16px;
+    line-height: 19px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.number-student,.span-total-lesson {
+    color: #6e6e6e;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.list-courses {
+    width: 150%;
+    display: inline-block;
+}
+
+.list-courses .row:before,.list-courses .row:after {
+    display: none;
+}
+
+.list-courses .course-item {
+    margin-bottom: 30px;
+}
+
+.list-courses .wrap-course-item {
+    background: var(--white-color);
+    box-shadow: 0 5px 15px 0 rgba(133,142,176,.15);
+    border-radius: 5px;
+}
+
+.list-courses .user-rating {
+    color: #6e6e6e;
+}
+
+.list-courses .course-info {
+    display: flex;
+    align-items: center;
+}
+
+.list-courses .course-info i {
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+.list-courses .course-info span {
+    display: flex;
+    align-items: center;
+}
+
+.list-courses .lession-count {
+    margin-right: 15px;
+}
+
+.course-title {
+    margin-top: 0;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+}
+
+.course-title a {
+    color: #172b4d;
+}
+
+.course-title a:hover {
+    color: var(--title-color-hover);
+    text-decoration: none;
+}
+
+.star-rating {
+    position: relative;
+    top: -2px;
+}
+
+.star-rating:before,.star-rating span:before {
+    font-family: "codelearn-font";
+    content: '';
+    display: inline-block;
+    line-height: 1;
+}
+
+.star-rating:before {
+    color: #c8c8c8;
+}
+
+.star-rating span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.star-rating span:before {
+    color: #f9bf08;
+}
+
+.course-item .user-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-info {
+    white-space: nowrap;
+}
+
+.fee {
+    display: none;
+}
+
+#search.block-top-head {
+    margin-bottom: 50px;
+}
+
+#search.block-top-head .input-group {
+    max-width: 100%;
+    margin: 0;
+    margin-right: 40px;
+}
+
+#search.block-top-head .form-inline {
+    margin-top: 20px;
+}
+
+.title-block {
+    margin: 0 0 25px;
+    font-size: 28px;
+    color: #f2f2f2;
+}
+
+.featured-courses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featured-courses:before,.featured-courses:after {
+    position: absolute;
+}
+
+.featured-courses .wrap-course-item {
+    display: flex;
+    flex-direction: column;
+    background: #e9b021 url("../../../Images/course/featured-course-bg-1.jpg") top right/cover no-repeat;
+    justify-content: flex-end;
+    padding: 30% 20px 25px;
+    height: 100%;
+    text-decoration: none;
+    color: var(--featured-color);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px -5px var(-\2d box-shadow-color);
+}
+
+.featured-courses .wrap-course-item img {
+    max-width: 70px;
+}
+
+.featured-courses .course-item {
+    margin-bottom: 30px;
+}
+
+.featured-courses .course-item:nth-child(2) .wrap-course-item {
+    background: #eb7359 url("../../../Images/course/featured-course-bg-2.jpg") top right/cover no-repeat;
+}
+
+.featured-courses .course-item:nth-child(3) .wrap-course-item {
+    background: #01a7b4 url("../../../Images/course/featured-course-bg-3.jpg") top right/cover no-repeat;
+}
+
+.featured-courses .course-item:nth-child(4) .wrap-course-item {
+    background: #5e44ae url("../../../Images/course/featured-course-bg-4.jpg") top right/cover no-repeat;
+}
+
+.featured-courses .course-title {
+    text-transform: uppercase;
+    color: var(--featured-color);
+    font-size: 26px;
+    line-height: 1.26;
+    margin-bottom: 30px;
+    height: 4em;
+    overflow: hidden;
+}
+
+.featured-courses .course-info {
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+}
+
+.featured-courses .course-info>span {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.featured-courses .course-info>span.student-count {
+    justify-content: flex-end;
+}
+
+.featured-courses .course-info i {
+    margin-right: 3px;
+    font-size: 22px;
+}
+
+.featured-courses .course-info .student-count {
+    text-align: right;
+}
+
+@media(max-width: 576.98px) {
+    #featured-courses .col-xs-6 {
+        width:100%;
+    }
+
+    .list-courses .course-item {
+        width: 100%;
+    }
+
+    .course-thumb>a>img {
+        height: 290px;
+    }
+}
+
+@media(min-width: 576.98px) {
+    .course-thumb>a>img {
+        height:245px;
+    }
+}
+
+@media(min-width: 768.98px) {
+    .course-thumb>a>img {
+        height:245px;
+    }
+}
+
+@media(min-width: 992.98px) {
+    #search.block-top-head .input-group {
+        max-width:380px;
+    }
+
+    #search.block-top-head .form-inline {
+        margin: 0;
+        text-align: right;
+    }
+}
+
+@media(min-width: 1024.98px) {
+    .course-thumb>a>img {
+        height:240px;
+    }
+}
+
+@media(min-width: 1200.98px) {
+    .course-thumb>a>img {
+        height:220px;
+    }
+}
+
+.head-course {
+    padding: 3% 5%;
+    background: url("images/2.gif");
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    /*margin-bottom: 200px;*/
+    padding: 130px;
+}
+
+.head-course h2 {
+    font-size: 28px;
+    color: var(--white);
+}
+
+.head-course h1,.head-course h2 {
+    margin: 0;
+    color: #ff2626;
+    font-size: 40px;
+}
+
+.head-course #search {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+}
+
+.head-course #search .btn {
+    height: 45px;
+    background-color: #ec5252;
+    padding: 10px 15px;
+    line-height: 28px;
+    margin-left: 15px;
+    transition: all 300ms;
+    border: none !important;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.head-course #search .btn i {
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.head-course #search .btn::before {
+    content: none;
+}
+
+.head-course #search .input-group {
+    font-size: 0;
+    display: inline-block;
+}
+
+.head-course #form-search {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: var(--white);
+    border-radius: 3px;
+}
+
+.head-course #form-search span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #65656d;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-course #form-search span:hover {
+    color: #fff;
+}
+
+.head-course #form-search span.input-group-addon {
+    background-color: transparent;
+}
+
+.head-course #form-search span.input-group-addon i {
+    margin-right: 0;
+    color: var(--accent-color);
+}
+
+.head-course #form-search span.input-group-addon:hover {
+    background-color: var(--accent-color);
+}
+
+.head-course #form-search span.input-group-addon:hover i {
+    color: #fff;
+}
+
+.head-course #form-search .form-control {
+    height: 45px;
+    padding-right: 45px;
+    padding-left: 10px;
+    background: none;
+    position: relative;
+}
+
+.head-course #form-search .form-control:-webkit-autofill,.head-course #form-search .form-control:-webkit-autofill:hover,.head-course #form-search .form-control:-webkit-autofill:focus,.head-course #form-search .form-control:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.cl-badge {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.cl-badge::before,.cl-badge::after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    border: 10px solid #10138c;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+.cl-badge::before {
+    top: 0;
+    right: 6px;
+    transform: rotate(-35deg);
+}
+
+.cl-badge::after {
+    bottom: 6px;
+    transform: rotate(35deg);
+    left: 0;
+}
+
+.cl-badge span {
+    position: absolute;
+    display: block;
+    width: 120px;
+    padding: 2px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    color: #fff;
+    text-align: center;
+    right: -10px;
+    font-weight: 600;
+    font-size: 10px;
+    top: 20px;
+    transform: rotate(-45deg);
+    background: var(--accent-color);
+}
+
+.cl-badge.hot span {
+    background: #e8505b;
+}
+
+.cl-badge.hot::before,.cl-badge.hot::after {
+    border: 10px solid #cd3e46;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+.cl-progress-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(10,208,218,.3);
+    position: relative;
+}
+
+.cl-progress-bar span {
+    background: #0ad0da;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    height: 100%;
+}
+
+.learning.site-body #layout-main {
+    padding-bottom: 55px;
+}
+
+@media(min-width: 1500px) {
+    .learning .course-thumb>a>img {
+        height:220px;
+    }
+
+    .learning .container {
+        max-width: 1600px;
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+.slick-track {
+    padding-top: 7px;
+}
+
+ul.slick-dots {
+    padding: 0;
+    margin: 0 0 20px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+ul.slick-dots li {
+    padding: 0;
+    width: 12px;
+    height: 12px;
+    transition: all 300ms;
+    border-radius: 50%;
+    background: #b3b4c9;
+    cursor: pointer;
+    margin: 0 7px;
+    list-style: none;
+    display: inline-block;
+}
+
+ul.slick-dots li button {
+    display: none;
+}
+
+ul.slick-dots li.slick-active,ul.slick-dots li:hover {
+    background: var(--accent-color);
+}
+
+.progress-circle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ebebeb;
+}
+
+.progress-circle:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-animation: colorload 2s;
+    animation: colorload 2s;
+}
+
+.progress-circle span {
+    padding: 10px 0;
+    font-size: 10px;
+    color: #36b37e;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    display: block;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+}
+
+.progress-circle span:after {
+    content: "%";
+    font-weight: 600;
+    color: #36b37e;
+}
+
+.progress-circle.progress-0:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(90deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-1:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(93.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-2:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(97.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-3:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(100.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-4:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(104.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-5:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(108deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-6:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(111.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-7:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(115.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-8:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(118.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-9:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(122.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-10:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(126deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-11:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(129.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-12:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(133.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-13:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(136.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-14:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(140.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-15:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(129.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-16:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(133.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-17:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(136.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-18:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(140.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-19:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(144deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-20:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(151.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-21:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(158.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-22:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(161.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-23:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(165.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-24:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(169.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-25:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(180deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-26:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(183.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-27:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(187.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-28:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(190.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-29:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(194.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-30:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(198deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-31:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(201.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-32:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(205.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-33:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(208.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-34:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(212.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-35:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(216deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-40:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(234deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-36:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(219.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-37:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(223.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-38:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(226.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-39:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(230.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-41:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(237.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-42:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(241.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-43:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(244.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-44:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(248.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-45:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(252deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-46:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(255.6deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-47:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(259.2deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-48:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(262.8deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-49:after {
+    background-image: linear-gradient(90deg,#ebebeb 50%,transparent 50%,transparent),linear-gradient(266.4deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-50:after {
+    background-image: linear-gradient(-90deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-51:after {
+    background-image: linear-gradient(-86.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-52:after {
+    background-image: linear-gradient(-82.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-53:after {
+    background-image: linear-gradient(-79.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-54:after {
+    background-image: linear-gradient(-75.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-55:after {
+    background-image: linear-gradient(-72deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-56:after {
+    background-image: linear-gradient(-68.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-57:after {
+    background-image: linear-gradient(-64.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-58:after {
+    background-image: linear-gradient(-61.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-59:after {
+    background-image: linear-gradient(-57.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-60:after {
+    background-image: linear-gradient(-54deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-61:after {
+    background-image: linear-gradient(-50.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-62:after {
+    background-image: linear-gradient(-46.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-63:after {
+    background-image: linear-gradient(-43.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-64:after {
+    background-image: linear-gradient(-39.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-65:after {
+    background-image: linear-gradient(-36deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-66:after {
+    background-image: linear-gradient(-32.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-67:after {
+    background-image: linear-gradient(-28.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-68:after {
+    background-image: linear-gradient(-25.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-69:after {
+    background-image: linear-gradient(-21.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-70:after {
+    background-image: linear-gradient(-18deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-71:after {
+    background-image: linear-gradient(-14.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-72:after {
+    background-image: linear-gradient(-10.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-73:after {
+    background-image: linear-gradient(-7.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-74:after {
+    background-image: linear-gradient(-3.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-75:after {
+    background-image: linear-gradient(0deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-76:after {
+    background-image: linear-gradient(3.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-77:after {
+    background-image: linear-gradient(7.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-78:after {
+    background-image: linear-gradient(10.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-79:after {
+    background-image: linear-gradient(14.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-80:after {
+    background-image: linear-gradient(18deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-81:after {
+    background-image: linear-gradient(21.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-82:after {
+    background-image: linear-gradient(25.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-83:after {
+    background-image: linear-gradient(28.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-84:after {
+    background-image: linear-gradient(32.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-85:after {
+    background-image: linear-gradient(36deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-86:after {
+    background-image: linear-gradient(39.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-87:after {
+    background-image: linear-gradient(43.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-88:after {
+    background-image: linear-gradient(46.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-89:after {
+    background-image: linear-gradient(50.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-90:after {
+    background-image: linear-gradient(54deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-91:after {
+    background-image: linear-gradient(57.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-92:after {
+    background-image: linear-gradient(61.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-93:after {
+    background-image: linear-gradient(64.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-94:after {
+    background-image: linear-gradient(68.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-95:after {
+    background-image: linear-gradient(72deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-96:after {
+    background-image: linear-gradient(75.6deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-97:after {
+    background-image: linear-gradient(79.2deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-98:after {
+    background-image: linear-gradient(82.8deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-99:after {
+    background-image: linear-gradient(86.4deg,#36b37e 50%,transparent 50%,transparent),linear-gradient(270deg,#36b37e 50%,#ebebeb 50%,#ebebeb);
+}
+
+.progress-circle.progress-100:after {
+    background: #36b37e;
+}
+
+.progress-circle.progress-100 span {
+    background: #36b37e;
+    color: #fff;
+}
+
+.progress-circle.progress-100 span::after {
+    color: #fff;
+}
+
+@-webkit-keyframes colorload {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}

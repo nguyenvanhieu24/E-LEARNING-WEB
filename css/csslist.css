@@ -1,0 +1,61 @@
+.nut_dropdown {
+  background-color: #0080ff;
+  font-family: Orbitron;
+  color: white;
+  padding: 14px 30px 14px 48px;
+  font-size: 25px;
+  border: none;
+  width: 900px;
+  cursor: pointer;
+}
+
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+.dropdown {
+  position: relative;
+  display: flex;
+  transition: inherit;
+}
+
+/* Nội dung Dropdown */
+.noidung_dropdown {
+  /*Ẩn nội dụng các đường dẫn*/
+  display: none;
+  position: absolute;
+  background: url(https://i.pinimg.com/originals/0c/77/b1/0c77b104541954f08072c7935f0d77e4.gif);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 900px;
+  font-size: 20px;
+  line-height: 48px;
+  box-shadow: 0px 8px 16px 0px #f00;
+}
+.time{
+  margin-right: 11px
+  flex-shrink: 0;
+    margin-left: 0px;
+    min-width: 69px;
+    text-align: right;
+    float: right   
+}
+/* Thiết kế style cho các đường dẫn tronng Dropdown */
+.noidung_dropdown a {
+  color: #ffffff;
+  padding: 12px 16px 10px 10px;
+  text-decoration: none;
+  /*display: block;*/
+   padding-left: 6px;
+  text-shadow: 0px 1px 1px #ffffff;
+  font-weight: bold;
+}
+.hienThi{
+  display:block;
+}
+a{
+  color: black;
+  transition-duration: 0.2s;
+  transition-property: color, background-color;
+}
+a:hover{
+  color: red;
+}

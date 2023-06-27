@@ -1,0 +1,79 @@
+
+::selection{
+  color:  #4da6ff;
+  background:  #000;
+}
+
+.wrapper{
+  max-width: 450px;
+  /*margin: 150px auto;*/
+}
+
+.wrapper .search-input{
+ transform-origin: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 25px 25px 50px rgb(9 215 255 / 25%), -10px -10px 30px rgb(9 222 255 / 10%), inset -5px -5px 15px rgb(95 239 251 / 50%);
+}
+
+.search-input input{
+  color: black;
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  font-family: codelearn-font;
+  box-shadow: 0px 1px 5px rgba(10, 10, 10, 0.1);
+}
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  color: white;
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background:   #0cd1e8;
+}
+
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
